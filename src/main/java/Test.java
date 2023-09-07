@@ -12,8 +12,13 @@ public class Test
 		NodeMCUv2Cutout cutout = new NodeMCUv2Cutout();
 
 		Geometry3D cutoutGeometry = cutout.getCutout(csg);
+		cutoutGeometry = csg.translate3DZ(3).transform(cutoutGeometry);
 
-		csg.view(cutoutGeometry);
+		Geometry3D box = csg.box3D(30, 60, 7, false);
+
+		Geometry3D result = csg.difference3D(box, cutoutGeometry);
+
+		csg.view(result);
 
 	}
 }

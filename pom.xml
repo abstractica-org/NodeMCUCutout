@@ -28,15 +28,14 @@
             <url>https://jitpack.io</url>
         </repository>
     </repositories>
-    <!--
+
     <dependencies>
         <dependency>
             <groupId>com.github.abstractica-org</groupId>
             <artifactId>JavaCSG</artifactId>
-
-            <version>v0.1.0</version>
+            <!--suppress MavenModelInspection -->
+            <version>v0.1.1</version>
         </dependency>
     </dependencies>
-    -->
 
 </project>
