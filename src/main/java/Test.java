@@ -11,5 +11,6 @@ public class Test
 		Geometry3D box = csg.box3D(10, 10, 10, false);
 
 		csg.view(box);
+		
 	}
 }
