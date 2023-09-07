@@ -1,6 +1,7 @@
 import org.abstractica.javacsg.Geometry3D;
 import org.abstractica.javacsg.JavaCSG;
 import org.abstractica.javacsg.JavaCSGFactory;
+import org.abstractica.javacsgmodules.nodemcucutout.NodeMCUv2Cutout;
 
 public class Test
 {
@@ -8,9 +9,11 @@ public class Test
 	{
 		JavaCSG csg = JavaCSGFactory.createDefault();
 
-		Geometry3D box = csg.box3D(10, 10, 10, false);
+		NodeMCUv2Cutout cutout = new NodeMCUv2Cutout();
 
-		csg.view(box);
-		
+		Geometry3D cutoutGeometry = cutout.getCutout(csg);
+
+		csg.view(cutoutGeometry);
+
 	}
 }
